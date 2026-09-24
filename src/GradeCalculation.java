@@ -5,7 +5,7 @@ public class GradeCalculation {
     public static void main(String[] args) { gradecalc(); }
 
 public static void gradecalc() {
-        Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);     // Creating new scanner as "input"
 
         System.out.print("Please enter the percent grade you received for course 1: ");
         double grade1 = input.nextDouble();
@@ -25,10 +25,12 @@ public static void gradecalc() {
         System.out.print("Please enter the percent grade you received for course 6: ");
         double grade6 = input.nextDouble();
 
-        double avg = (grade1 +grade2 +grade3 +grade4 +grade5 +grade6)/6;
-        String letteravg;
+        // ^^^^^^^^^^^^ Takes 6 double inputs and saves them as grades 1-6
 
-        if (avg >= 90) {
+        double avg = (grade1 +grade2 +grade3 +grade4 +grade5 +grade6)/6;
+        String letteravg;   // Calc. avg and initialise letteravg as string variable
+
+        if (avg >= 90) {    // If/else statement to determine letter grade from avg % grade
             letteravg = "A";
         } else if (avg >= 70) {
             letteravg = "B";
